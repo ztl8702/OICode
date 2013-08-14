@@ -1,0 +1,18 @@
+[FZYZOJ1583]
+此题中 dfs 过程内
+    for i:=y+2 to m do
+      if hi[x,i]=0 then
+        dfs(x,i,sum+map[x,i]);
+    for i:=x+1 to n do
+      for j:=1 to m do
+        if hi[i,j]=0 then
+          dfs(i,j,sum+map[i,j]);
+
+第二次循环i从x+1 开始时为了防止Ｓ的情况
+（X为上次遍历的点，N S K 为可拓展的点）
+
+1 1 1 0 0
+1 X 1 0 N
+1 1 1 0 S
+K K K K K
+K K K K k

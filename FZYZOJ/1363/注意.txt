@@ -1,0 +1,2 @@
+g++ 编译提示: too many arguments for format [-Wformat-extra-args]
+说明scanf或printf参数与“%d%d”格式串不符。小数据请用cin cout

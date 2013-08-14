@@ -1,0 +1,58 @@
+P1467 -- [bonism]monkeys
+时间限制：1000MS      内存限制：131072KB 
+
+Description
+There are n monkeys on a tree. They are numbered from 1 to n. The monkey number 1 clutches a branch by its tail. Remaining monkeys either are held by other monkeys, hold on to other monkeys or both. Each monkey can use two hands and can hold at most one other monkey in each hand (gripping its tail). Starting from the moment 0, at each second one monkey releases its grip of one hand. This may cause some monkeys fall down onto the ground, where they can continue releasing their grips (the time of falling is negligibly small).
+
+Task
+
+Write a program which:
+
+reads from the standard input the description of how the monkeys hold together and in what order they release their grips, 
+for each monkey computes the time it falls down onto the ground, 
+writes the result to the standard output. 
+参考翻译：
+
+树上有n只猴子，它们编号为1~n。1号猴子用它的尾巴勾住一根树枝，其他的猴子有的被别的猴子抓住，有的抓住别的猴子，有的同时抓与被抓……每只猴子可以用它们的两只手，每只手至多抓住一只猴子。从0时刻开始，每秒会有一只猴子松开它的一只手。这也许会导致一些猴子掉到地上（猴子掉到地上也可以松手，掉落的时间忽略不计）。
+
+任务：
+
+编写一个程序完成：
+
+从输入中读取初始状态猴子如何挂在一起，以及猴子们松手的顺序；输出每只猴子掉到地上的时间。
+
+Input Format
+The first line of the standard input consists of two positive integers n and m, 1 <= n <= 200000, 1 <= m <= 400000. The number n denotes the number of monkeys, and the number m denotes the time (in seconds) we observe the monkeys. Next n lines contains the description of the initial situation. In the (k + 1)-st line (1 <= k <= n) there are two integers denoting the numbers of monkeys that are hold by the monkey number k. The former is the number of the monkey that is hold by the left hand, and the latter - by the right hand. The number -1 denotes that the monkey's hand is free. The following m lines denote the result of the observation of the monkeys. In the i-th of those lines (1 <= i <= m) there are two integers. The former is the number of the monkey, and the latter is the number of its hand (1 - left, 2 - right) the monkey releases its grip of, in the moment i - 1.
+
+参考翻译：
+
+输入的第一行包含两个正整数n和m，1 <= n <= 200000, 1 <= m <= 400000。n表示猴子的数量，m表示从0~m-1时刻每时刻有一只猴子松开它的一只手。接下来的n行描述猴子的初始状态。在第k+1行有两个正整数表示k号猴子两只手的情况：前一个数表示左手抓的猴子编号，后一个数表示右手抓的猴子编号，若为-1则该手是空的。接下来m行表示猴子松手的情况。每行有两个正整数a，b，表示a号猴子在该时刻放开它的一只手（b=1为左手，b=2为右手）。
+
+Output Format
+Your program should write to the standard output exactly n integers, one per line. The number of the i-th line should denote the moment the i-th monkey fell down onto the ground, or should be equal -1 if the monkey has not fallen down onto the ground during the observation.
+
+参考翻译：
+
+你的程序需要输出n个整数，每行一个。第i行的整数表示第i只猴子在何时刻掉到地上。若这只猴子不会掉到地上，则用-1表示。
+
+Sample Input
+3 2
+-1 3
+3 -1
+1 2
+1 2
+3 1
+Sample Output
+-1
+1
+1
+
+Hint
+样例解释如下：
+
+初始状态为1号抓3号，2号抓3号，3号抓1号，3号抓2号。
+
+0时刻1号松左手，此时2号抓3号，3号抓1号，3号抓2号。
+
+1时刻3号松左手，此时3号抓2号，2号抓3号。由于2、3号都不与1号相连，所以两只猴子在1时刻掉到地上。
+

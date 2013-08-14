@@ -1,0 +1,14 @@
+program md1615;
+var i:longint;
+
+begin
+
+  assign(output,'OJ1615.in');
+  rewrite(output);
+  randomize;
+  writeln(10);
+  for i:=1 to 10 do
+    write(random(20000)-10000,' ');
+  writeln;
+  close(output);
+end.

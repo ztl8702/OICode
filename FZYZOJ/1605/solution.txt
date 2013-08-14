@@ -1,0 +1,5 @@
+维护一个大根堆HMax 和小根堆 HMin
+使得 HMax.tot=HMin.tot+1 
+且 HMax中所有元素 小于 HMin中所有元素
+则 HMax.getTop 为 中位数 
+HMin.getTop 为 中位数的下一个数

@@ -1,0 +1,17 @@
+program mk1634;
+var
+  n,i:longint;
+begin
+  assign(output,'oj1634.in');
+  rewrite(output);
+  readln(n);
+  randomize;
+  writeln(n);
+  for i:=1 to 2*n do
+    write(random(10000),' ');
+  writeln;
+  for i:=1 to 2*n do
+    write(random(10000),' ');
+  writeln;
+
+end.

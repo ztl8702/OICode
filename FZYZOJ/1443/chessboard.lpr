@@ -1,0 +1,6 @@
+program chessboard;
+
+
+begin
+end.
+
