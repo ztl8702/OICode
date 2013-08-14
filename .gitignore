@@ -10,4 +10,7 @@ backup/
 *.manifest
 *.rc
 fp___.out
+*.err
+*.complied
+
 
