@@ -1,4 +1,13 @@
 *.[oa]
+!*.out
 *~
 *.exe
 *.bak
+build/
+backup/
+*.ico
+*.lpi
+*.manifest
+*.rc
+fp___.out
+
